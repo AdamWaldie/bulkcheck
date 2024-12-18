@@ -1,4 +1,4 @@
-# Admiral SYN-ACKbar's AbuseIPDB Bulk Checker (https://github.com/AdmiralSYN-ACKbar/AbuseIPDB-Bulk-Checker)
+# Waldo's AbuseIPDB Bulk Checker
 
 import csv          #implements classes to read and write tabular data in CSV format
 import requests     #allows sending/receiving HTTP requests
@@ -84,14 +84,14 @@ def browse_save_file(entry):  # Define a function to browse for a file save
 def main():
     global root
     root = tk.Tk()  # Create the main window
-    root.title("Admiral SYN-ACKbar's AbuseIPDB Bulk Checker")  # Set the title of the window
+    root.title("Waldo's AbuseIPDB Bulk Checker")  # Set the title of the window
     root.geometry("500x600")  # Set the size of the window
 
     frame = ttk.Frame(root, padding="10")  # Create a frame widget
     frame.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))  # Place the frame on the grid
 
     # Create and place two title labels
-    title_label1 = ttk.Label(frame, text="Admiral SYN-ACKbar's", font=("Sylfaen", 14, "italic"))
+    title_label1 = ttk.Label(frame, text="Waldo's", font=("Sylfaen", 14, "italic"))
     title_label1.grid(row=0, column=0, columnspan=3)
     title_label2 = ttk.Label(frame, text="AbuseIPDB Bulk Checker", font=("Sylfaen", 18, "bold"))
     title_label2.grid(row=1, column=0, columnspan=3)
@@ -120,9 +120,9 @@ def main():
 
     # Create and place the submit button
     style = ttk.Style()
-    style.configure('Engage.TButton', font=("Sylfaen", 14, "bold"))
-    style.configure('Engage.TButton', background='red')
-    submit_button = ttk.Button(frame, text="ENGAGE", command=lambda: bulk_check(csv_entry.get(), api_entry.get(), export_entry.get(), progress, output_box), style='Engage.TButton')
+    style.configure('Start.TButton', font=("Sylfaen", 14, "bold"))
+    style.configure('Start.TButton', background='red')
+    submit_button = ttk.Button(frame, text="Start", command=lambda: bulk_check(csv_entry.get(), api_entry.get(), export_entry.get(), progress, output_box), style='Start.TButton')
     submit_button.grid(row=5, column=0, columnspan=3, sticky=(tk.W, tk.E))
 
     # Create and place the output label, progress bar, and output box
@@ -134,9 +134,9 @@ def main():
     output_box.grid(row=8, column=0, columnspan=3, sticky=(tk.W, tk.E))
 
     # Create and place the quit button
-    style.configure('RunAway.TButton', font=("Sylfaen", 14, "bold"))
-    style.configure('RunAway.TButton', background='blue')
-    quit_button = ttk.Button(frame, text="RUN AWAY", command=root.destroy, style='RunAway.TButton')
+    style.configure('ExitOut.TButton', font=("Sylfaen", 14, "bold"))
+    style.configure('ExitOut.TButton', background='blue')
+    quit_button = ttk.Button(frame, text="Exit", command=root.destroy, style='ExitOut.TButton')
     quit_button.grid(row=9, column=0, columnspan=3, sticky=(tk.W, tk.E))
 
     # Add padding to all child widgets of the frame
